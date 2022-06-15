@@ -1,0 +1,29 @@
+{
+  "name": "mern-tutorial",
+  "version": "1.0.0",
+  "description": "Goalsetter app tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makmur69/mern-tutorial.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/makmur69/mern-tutorial/issues"
+  },
+  "homepage": "https://github.com/makmur69/mern-tutorial#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
