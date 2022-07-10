@@ -1,4 +1,6 @@
 const asyncHandler = require('express-async-handler')
+const { now } = require("mongoose");
+const { remove } = require("../models/goalModel");
 const Goal = require('../models/goalModel')
 
 // @desc    Get goals
@@ -45,6 +47,14 @@ res.status(200).json(updateGoal)
 const deleteGoal = asyncHandler (async(req,res) => {
 res.status(200).json({message: `Delete Goal ${req.params.id}`})
 })
+if (!goal) {
+    res.status(400)
+    throw new Error ('Goal Not Found')
+}
+await goal.remove ()
+
+res.status(200).json({id: req.params.id})
+
 module.exports = {
 getGoals,
 setGoal,
